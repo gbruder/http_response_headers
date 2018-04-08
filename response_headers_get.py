@@ -54,8 +54,8 @@ def main():
 # ---------------------------------------------------------------------------------------------
 def print_response_headers(this_url, header_verify):
 
+    print "\n---------------------------------------------------------------------------------"
     print   "URL:    " + this_url
-    print header_verify
 
     key = ""
     value = ""
@@ -66,9 +66,9 @@ def print_response_headers(this_url, header_verify):
         print "Response Header:"
         for key,value in headers.items():
             print("\t%s: %s " % (key, value))
-        print '\n'
     except Exception as e:
         print e.message, e.args
+    print "---------------------------------------------------------------------------------\n"
 
     return()
 
